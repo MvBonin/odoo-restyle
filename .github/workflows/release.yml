@@ -1,0 +1,46 @@
+name: Release Chrome Extension
+
+on:
+  push:
+    tags:
+      - "v*.*.*" # This triggers the workflow on version tags
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Remove Node.js setup and npm install steps
+      # If you have other build steps specific to your extension, you can add them here
+
+      - name: Build signed CRX file
+        uses: cardinalby/webext-buildtools-chrome-crx-action@v1
+        id: buildCrx
+        with:
+          extensionDir: "." # Adjust this path to your extension directory if needed
+          crxFilePath: "build/odoo-restyle-mvbonin.crx"
+          privateKey: ${{ secrets.PRIVATE_KEY }}
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: build/odoo-restyle-mvbonin.crx
+          asset_name: odoo-restyle-mvbonin.crx
+          asset_content_type: application/octet-stream

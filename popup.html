@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ODOO ReStyle Settings</title>
+    <style>
+        :root {
+            --theme-primary: #4B5945;
+            --theme-hover: #66785F;
+            --theme-background: #f5f5f5;
+        }
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select, input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #urlList {
+            max-height: 100px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+        .url-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            background: var(--theme-background);
+            padding: 8px;
+            border-radius: 4px;
+        }
+        .url-item span {
+            flex-grow: 1;
+            margin-right: 8px;
+            word-break: break-all;
+        }
+        .delete-url {
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .delete-url:hover {
+            background-color: #ffebee;
+        }
+        .delete-url svg {
+            width: 16px;
+            height: 16px;
+            fill: #d32f2f;
+        }
+        #addCurrentUrl {
+            width: 100%;
+            padding: 8px;
+            background-color: var(--theme-primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #addCurrentUrl:hover {
+            background-color: var(--theme-hover);
+        }
+        /* Toggle Switch */
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 5px;
+            background: var(--theme-background);
+            border-radius: 4px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: var(--theme-primary);
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .toggle-label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-switch">
+        <span class="toggle-label">Theme</span>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="colorScheme">Color Scheme:</label>
+        <select id="colorScheme">
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button id="addCurrentUrl">Add Current ODOO URL</button>
+    </div>
+    <div class="form-group">
+        <label>Active URLs:</label>
+        <div id="urlList"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
