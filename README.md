@@ -1,1 +1,1 @@
-# Zoho People Überstunden Addon für Chrome / Edge
+# ODOO ReStyle für Chrome / Edge
