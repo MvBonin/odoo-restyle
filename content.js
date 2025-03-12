@@ -52,7 +52,7 @@
   function getCssColors() {
     return `
     :root {
-        /* Base Colors */
+
         --col01: ${activeColors.col01};
         --col02: ${activeColors.col02};
         --col03: ${activeColors.col03};
@@ -61,44 +61,37 @@
         --colbg01: ${activeColors.colbg01};
         --colbg02: ${activeColors.colbg02};
 
-        /* Primary Colors */
+        /* Primäre Farben */
         --color-primary: var(--col03);
         --color-bg-primary: var(--col05);
-        --color-primary-hover: var(--col02);
-        --color-primary-active: var(--col01);
+        --color-primary-hover: var(--col02);    /* Etwas helleres Blau beim Hover */
+        --color-primary-active: var(--col01);   /* Noch helleres Blau */
 
-        /* Text Colors */
-        --color-text-white: #ffffff;
-        --color-text-link: var(--col02);
-        --color-text-link-hover: var(--col01);
         --text-bg-primary: var(--color-primary);
 
-        /* Background Colors */
-        --color-background: var(--colbg02);
+        /* Sekundäre Farben */
+        --color-accent: var(--col04);           /* Dunkelblau am Rand */
+        --color-background: var(--colbg02);       /* Hintergrundfarbe */
         --color-background-gradient-start: var(--colbg01);
         --color-background-gradient-end: var(--colbg02);
 
-        /* Accent Colors */
-        --color-accent: var(--col04);
+        /* Textfarben */
+        --color-text-white: #ffffff;
+        --color-text-link: var(--col02);
+        --color-text-link-hover: var(--col01);
+
+        /* Zustandsfarben */
         --color-checked-bg: var(--col03);
-        --color-checked-border: var(--col02);
-        --color-active-bg: var(--col04);
+        --color-checked-border: #85c1e9;
+        --color-active-bg: #3C3E4B;
         --color-active-border: var(--col03);
 
-        /* Navigation Colors */
+        /* Schatten */
+        --shadow-focus: rgba(58, 123, 213, 0.5);
+
+        /* Zusätzliche Variablen für spezifische Styles */
         --NavBar-entry-color: #E4E4E4;
-        --NavBar-brand-color: var(--col03);
-        --NavBar-entry-borderColor-active: var(--col01);
-        --NavBar-entry-backgroundColor--active: var(--col05);
-        --NavBar-entry-backgroundColor--hover: var(--col03);
-        --NavBar-entry-backgroundColor--focus: var(--col04);
-
-        /* Menu Colors */
         --homeMenuCaption-color: #FFF;
-        --homeMenu-bg-color: var(--color-background);
-
-        /* Effects */
-        --shadow-focus: ${activeColors.col03}40;
     }
     `;
   }
@@ -167,215 +160,6 @@
     });
   });
 
-  // Zentralisierte Farbvariablen
-  const cssColors = `
-  :root {
-      --col01: ${activeColors.col01};
-      --col02: ${activeColors.col02};
-      --col03: ${activeColors.col03};
-      --col04: ${activeColors.col04};
-      --col05: ${activeColors.col05};
-      --colbg01: ${activeColors.colbg01};
-      --colbg02: ${activeColors.colbg02};
-
-      /* Primäre Farben */
-      --color-primary: var(--col03);
-      --color-bg-primary: var(--col05);
-      --color-primary-hover: var(--col02);    /* Etwas helleres Blau beim Hover */
-      --color-primary-active: var(--col01);   /* Noch helleres Blau */
-
-      --text-bg-primary: var(--color-primary);
-
-      /* Sekundäre Farben */
-      --color-accent: var(--col04);           /* Dunkelblau am Rand */
-      --color-background: var(--colbg02);       /* Hintergrundfarbe */
-      --color-background-gradient-start: var(--colbg01);
-      --color-background-gradient-end: var(--colbg02);
-
-      /* Textfarben */
-      --color-text-white: #ffffff;
-      --color-text-link: var(--col02);
-      --color-text-link-hover: var(--col01);
-
-      /* Zustandsfarben */
-      --color-checked-bg: var(--col03);
-      --color-checked-border: #85c1e9;
-      --color-active-bg: #3C3E4B;
-      --color-active-border: var(--col03);
-
-      /* Schatten */
-      --shadow-focus: rgba(58, 123, 213, 0.5);
-
-      /* Zusätzliche Variablen für spezifische Styles */
-      --NavBar-entry-color: #E4E4E4;
-      --homeMenuCaption-color: #FFF;
-  }
-  `;
-
-  // CSS für Hauptseiten ohne :root
-  const cssMain = `
-  .o_frontend_to_backend_nav .o_frontend_to_backend_apps_btn {
-      background-color: var(--col02);
-  }
-
-  .o_frontend_to_backend_nav:hover .o_frontend_to_backend_apps_btn:hover {
-      background-color: var(--col01);
-  }
-
-  .o_frontend_to_backend_nav::before {
-      border-top: 20px solid var(--col02);
-      border-left: 20px solid var(--col02);
-  }
-  `;
-
-  // CSS für /web-Pfade ohne :root
-  const cssWeb = `
-  /* Umfangreicher CSS-Code für /web Pfade */
-
-  /* Direkte Überschreibung der btn-primary Klasse */
-  .btn-primary {
-      background-color: var(--color-primary) !important;
-      border-color: var(--color-primary) !important;
-      color: var(--color-text-white) !important;
-  }
-
-  .text-primary {
-      color: var(--color-primary) !important;
-  }
-
-  .text-bg-primary {
-      color: #FFF !important;
-      background-color: var(--text-bg-primary) !important;
-  }
-
-  .o_base_settings_view .o_form_renderer {
-      --settings__tab-bg: #1B1D26;
-      --settings__tab-bg--active: var(--col04);
-  }
-
-  .o_main_navbar {
-      --o-navbar-badge-color: #FFF;
-      --o-navbar-badge-text-shadow: none;
-      --NavBar-menuToggle-color: #FFF;
-      --NavBar-brand-color: var(--col03);
-      --NavBar-entry-borderColor-active: var(--col01);
-      --NavBar-entry-backgroundColor--active: var(--col05);
-      --NavBar-entry-backgroundColor--hover: var(--col03);
-      --NavBar-entry-backgroundColor--focus: var(--col04);
-  }
-
-  .btn-link {
-      font-weight: 400;
-      color: var(--col02);
-      text-decoration: none;
-  }
-
-  .btn-link:hover {
-      font-weight: 400;
-      color: var(--col01);
-      text-decoration: none;
-  }
-
-  /* Hover- und Fokus-Effekte für btn-primary */
-  .btn-primary:hover,
-  .btn-primary:focus {
-      background-color: var(--color-primary-hover) !important;
-      border-color: var(--color-primary-hover) !important;
-      color: var(--color-text-white) !important;
-  }
-
-  .o_tour_pointer_tip {
-      --TourPointer__color-accent: var(--col02);
-      --TourPointer__color: var(--col03);
-  }
-
-  /* Standard-Stil */
-  .btn-outline-primary {
-      color: var(--color-primary) !important;
-      border-color: var(--color-primary) !important;
-      background-color: transparent !important;
-  }
-
-  /* Hover-Effekt */
-  .btn-outline-primary:hover {
-      color: var(--color-text-white) !important;
-      background-color: var(--color-primary) !important;
-      border-color: var(--color-primary) !important;
-  }
-
-  /* Fokus-Effekt */
-  .btn-outline-primary:focus {
-      box-shadow: 0 0 0 0.2rem var(--shadow-focus) !important;
-  }
-
-  a {
-      color: var(--color-text-link);
-      text-decoration: none;
-      transition: color 0.3s ease-in-out;
-  }
-
-  a:hover {
-      color: var(--color-text-link-hover);
-  }
-
-  .o_form_uri > span:first-child {
-      color: var(--color-text-link) !important;
-      text-decoration: none;
-      transition: color 0.3s ease-in-out;
-  }
-
-  .o_form_view .o_form_uri > span:first-child {
-      color: var(--color-text-link) !important;
-  }
-
-  .o_form_uri > span:first-child:hover {
-      color: var(--color-text-link-hover) !important;
-      text-decoration: underline;
-  }
-
-  .form-check-input:checked {
-      background-color: var(--color-primary-hover);
-      border-color: var(--color-checked-border);
-  }
-
-  .list-group-item.active {
-      color: var(--color-primary-hover);
-      background-color: var(--color-active-bg);
-      border-color: var(--color-active-border);
-  }
-
-  .o_frontend_to_backend_nav .o_frontend_to_backend_apps_btn {
-      background-color: var(--color-primary-hover);
-  }
-
-  .o_frontend_to_backend_nav:hover .o_frontend_to_backend_apps_btn:hover {
-      background-color: var(--color-active-border);
-  }
-
-  .o_frontend_to_backend_nav::before {
-      border-top: 20px solid var(--color-primary-hover);
-      border-left: 20px solid var(--color-primary-hover);
-  }
-
-  .o_home_menu_background {
-      --homeMenu-bg-color: var(--color-background);
-      background: linear-gradient(45deg, var(--color-background-gradient-start), var(--color-background-gradient-end)) !important;
-  }
-
-  .o_home_menu .o_app .o_caption {
-      color: var(--homeMenuCaption-color, #FFF) !important;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 2px 5px rgba(0, 0, 0, 0.05), 0 0 5px rgba(0, 0, 0, 0.05) !important;
-  }
-
-  .o_main_navbar .o_menu_toggle,
-  .o_main_navbar .o_menu_brand,
-  .o_main_navbar .o_navbar_apps_menu .dropdown-toggle,
-  .o_main_navbar .o_nav_entry,
-  .o_main_navbar .dropdown-toggle {
-      color: var(--NavBar-entry-color, #E4E4E4);
-  }
-  `;
-
   /**
    * Funktion zum Hinzufügen von CSS zum Dokument
    * @param {string} css - Der CSS-Code als String
@@ -415,96 +199,213 @@
 
     // Define CSS for different paths
     const cssMain = `
-      .o_frontend_to_backend_nav .o_frontend_to_backend_apps_btn {
+    .o_frontend_to_backend_nav .o_frontend_to_backend_apps_btn {
         background-color: var(--col02);
-      }
+    }
 
-      .o_frontend_to_backend_nav:hover .o_frontend_to_backend_apps_btn:hover {
+    .o_frontend_to_backend_nav:hover .o_frontend_to_backend_apps_btn:hover {
         background-color: var(--col01);
-      }
+    }
 
-      .o_frontend_to_backend_nav::before {
+    .o_frontend_to_backend_nav::before {
         border-top: 20px solid var(--col02);
         border-left: 20px solid var(--col02);
-      }
+    }
     `;
 
     const cssWeb = `
-      /* Buttons and Links */
-      .btn-primary {
-        background-color: var(--col03) !important;
-        border-color: var(--col03) !important;
+      /* Umfangreicher CSS-Code für /web Pfade */
+
+    /* Direkte Überschreibung der btn-primary Klasse */
+    .btn-primary {
+        background-color: var(--color-primary) !important;
+        border-color: var(--color-primary) !important;
         color: var(--color-text-white) !important;
-      }
+    }
 
-      .btn-primary:hover,
-      .btn-primary:focus {
-        background-color: var(--col02) !important;
-        border-color: var(--col02) !important;
-      }
+    .text-primary {
+        color: var(--color-primary) !important;
+    }
 
-      .btn-link {
-        color: var(--col02);
-      }
-
-      .btn-link:hover {
-        color: var(--col01);
-      }
-
-      /* Text Colors */
-      .text-primary {
-        color: var(--col03) !important;
-      }
-
-      .text-bg-primary {
+    .text-bg-primary {
         color: #FFF !important;
-        background-color: var(--col03) !important;
-      }
+        background-color: var(--text-bg-primary) !important;
+    }
 
-      /* Navigation */
-      .o_main_navbar {
+    .o_base_settings_view .o_form_renderer {
+        --settings__tab-bg: #1B1D26;
+        --settings__tab-bg--active: var(--col04);
+    }
+
+    .o_main_navbar {
         --o-navbar-badge-color: #FFF;
+        --o-navbar-badge-text-shadow: none;
         --NavBar-menuToggle-color: #FFF;
         --NavBar-brand-color: var(--col03);
         --NavBar-entry-borderColor-active: var(--col01);
         --NavBar-entry-backgroundColor--active: var(--col05);
         --NavBar-entry-backgroundColor--hover: var(--col03);
         --NavBar-entry-backgroundColor--focus: var(--col04);
-      }
 
-      /* Home Menu */
-      .o_home_menu_background {
-        background: linear-gradient(45deg, var(--colbg01), var(--colbg02)) !important;
-      }
+        background: transparent;
+    }
+    .o_control_panel {
+    background: transparent;
+    }
+    .o_main_navbar .o_menu_sections .o_nav_entry, .o_main_navbar .o_menu_sections .dropdown-toggle {
+      background: transparent;
+    }
 
-      .o_home_menu .o_app .o_caption {
+    .o_kanban_header{
+
+    background: #262A36;
+
+
+  /* Blur effect behind the element */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px); /* for older Safari support */
+
+   padding-left: 8px;
+   padding-right: 8px;
+    }
+
+    .o_kanban_renderer {
+    //--KanbanGroup-grouped-bg: #262A36;
+    //--KanbanRecord__image-bg-color: #E4E4E4;
+    //--KanbanColumn__highlight-background: #17373b;
+    //--KanbanColumn__highlight-border: #02c7b5;
+    //--Kanban-background: #1B1D26;
+    background: linear-gradient(45deg, var(--color-background-gradient-start), var(--color-background-gradient-end)) !important;
+     }
+
+    .alert-info {
         color: #FFF !important;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-      }
+        background-color: var(--col05) !important;
+        border-color: var(--col02) !important;
+    }
+    .o_kanban_renderer.o_kanban_grouped .o_kanban_group {
+     background: transparent;
 
-      /* Form Elements */
-      .form-check-input:checked {
-        background-color: var(--col02);
-        border-color: var(--col01);
-      }
+    }
 
-      /* Links */
-      a, .o_form_uri > span:first-child {
+    .o_navbar {
+       background: transparent;
+    }
+
+    .o_web_client {
+      background: linear-gradient(45deg, var(--color-background-gradient-start), var(--color-background-gradient-end)) !important;
+    }
+
+    .btn-link {
+        font-weight: 400;
         color: var(--col02);
         text-decoration: none;
-        transition: color 0.3s ease-in-out;
-      }
+    }
 
-      a:hover, .o_form_uri > span:first-child:hover {
+    .btn-link:hover {
+        font-weight: 400;
         color: var(--col01);
-      }
+        text-decoration: none;
+    }
 
-      /* Active States */
-      .list-group-item.active {
-        color: var(--col02);
-        background-color: var(--col04);
-        border-color: var(--col03);
-      }
+    /* Hover- und Fokus-Effekte für btn-primary */
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: var(--color-primary-hover) !important;
+        border-color: var(--color-primary-hover) !important;
+        color: var(--color-text-white) !important;
+    }
+
+    .o_tour_pointer_tip {
+        --TourPointer__color-accent: var(--col02);
+        --TourPointer__color: var(--col03);
+    }
+
+    /* Standard-Stil */
+    .btn-outline-primary {
+        color: var(--color-primary) !important;
+        border-color: var(--color-primary) !important;
+        background-color: transparent !important;
+    }
+
+    /* Hover-Effekt */
+    .btn-outline-primary:hover {
+        color: var(--color-text-white) !important;
+        background-color: var(--color-primary) !important;
+        border-color: var(--color-primary) !important;
+    }
+    .
+    /* Fokus-Effekt */
+    .btn-outline-primary:focus {
+        box-shadow: 0 0 0 0.2rem var(--shadow-focus) !important;
+    }
+
+    a {
+        color: var(--color-text-link);
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+        color: var(--color-text-link-hover);
+    }
+
+    .o_form_uri > span:first-child {
+        color: var(--color-text-link) !important;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .o_form_view .o_form_uri > span:first-child {
+        color: var(--color-text-link) !important;
+    }
+
+    .o_form_uri > span:first-child:hover {
+        color: var(--color-text-link-hover) !important;
+        text-decoration: underline;
+    }
+
+    .form-check-input:checked {
+        background-color: var(--color-primary-hover);
+        border-color: var(--color-checked-border);
+    }
+
+    .list-group-item.active {
+        color: var(--color-primary-hover);
+        background-color: var(--color-active-bg);
+        border-color: var(--color-active-border);
+    }
+
+    .o_frontend_to_backend_nav .o_frontend_to_backend_apps_btn {
+        background-color: var(--color-primary-hover);
+    }
+
+    .o_frontend_to_backend_nav:hover .o_frontend_to_backend_apps_btn:hover {
+        background-color: var(--color-active-border);
+    }
+
+    .o_frontend_to_backend_nav::before {
+        border-top: 20px solid var(--color-primary-hover);
+        border-left: 20px solid var(--color-primary-hover);
+    }
+
+    .o_home_menu_background {
+        --homeMenu-bg-color: var(--color-background);
+        background: linear-gradient(45deg, var(--color-background-gradient-start), var(--color-background-gradient-end)) !important;
+    }
+
+    .o_home_menu .o_app .o_caption {
+        color: var(--homeMenuCaption-color, #FFF) !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 2px 5px rgba(0, 0, 0, 0.05), 0 0 5px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .o_main_navbar .o_menu_toggle,
+    .o_main_navbar .o_menu_brand,
+    .o_main_navbar .o_navbar_apps_menu .dropdown-toggle,
+    .o_main_navbar .o_nav_entry,
+    .o_main_navbar .dropdown-toggle {
+        color: var(--NavBar-entry-color, #E4E4E4);
+    }
     `;
 
     // Apply the appropriate CSS
