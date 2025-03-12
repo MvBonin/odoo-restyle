@@ -27,13 +27,13 @@
   };
 
   const colorsGreen = {
-  col01: "#B2C9AD",
-      col02: "#91AC8F",
-      col03: "#66785F",
-      col04: "#4B5945",
-      col05: "#272e24",
-      colbg01: "#4B5945",
-      colbg02: "#272e24",
+    col01: "#a8e6a1", // Hellgrün (Highlight)
+    col02: "#80c77a", // Kräftiges Mittelgrün
+    col03: "#5a9a56", // Gedämpftes Dunkelgrün
+    col04: "#376236", // Dunkelgrün
+    col05: "#1b331b", // Sehr dunkles Grün
+    colbg01: "#2c4d2c", // Hintergrund 1 (etwas dunkler als col04)
+    colbg02: "#142614", // Hintergrund 2 (etwas dunkler als col05)
 };
 
   const colorsPink = {
@@ -45,8 +45,146 @@
       colbg01: "#210f18",
       colbg02: "#0b0508",
 };
+const colorsPinker = {
+  col01: "#FFD9EC", // Helles Pastellpink
+  col02: "#FF8ED2", // Intensives Pink
+  col03: "#FF52B6", // Leuchtendes Pink
+  col04: "#E62991", // Kräftiges, dunkleres Pink
+  col05: "#A61D6B", // Tiefes Dunkelpink
+  colbg01: "#731447", // Dunkler Hintergrund (kräftiges Pink)
+  colbg02: "#3B0A25", // Sehr dunkler Hintergrund (fast schwarz-pink)
+};
 
-  let activeColors = colorsGreen;
+const colorsOrange = {
+  col01: "#FFC285", // Helles Orange
+  col02: "#FF9A49", // Kräftiges Orange
+  col03: "#D17A33", // Gedämpftes Mittelorange
+  col04: "#8A4E1E", // Dunkel-Orange-Braun
+  col05: "#4A2910", // Sehr dunkles Braun
+  colbg01: "#633614", // Dunkler Hintergrund
+  colbg02: "#2E1A0A", // Noch dunklerer Hintergrund
+};
+
+const colorsPurple = {
+  col01: "#D7B9FF", // Helles Violett
+  col02: "#B18EFF", // Mittleres Violett
+  col03: "#8A5DDB", // Gedämpftes Lila
+  col04: "#57338A", // Dunkles Violett
+  col05: "#301B4A", // Sehr dunkles Lila
+  colbg01: "#402561", // Dunkler Hintergrund
+  colbg02: "#1C1029", // Noch dunklerer Hintergrund
+};
+
+const colorsRed = {
+  col01: "#FF9A9A", // Helles Rot-Rosa
+  col02: "#FF5E5E", // Kräftiges Rot
+  col03: "#C24444", // Dunkleres Rot
+  col04: "#7A2B2B", // Dunkelrot
+  col05: "#451919", // Sehr dunkles Burgund
+  colbg01: "#561F1F", // Dunkler Hintergrund
+  colbg02: "#260E0E", // Noch dunklerer Hintergrund
+};
+
+const colorsYellow = {
+  col01: "#FFE899", // Warmes, helles Gelb (freundlich)
+  col02: "#FFD966", // Wärmeres Mittelgelb
+  col03: "#D9B13B", // Kräftiges, warmes Goldgelb
+  col04: "#947324", // Warmes, dunkles Goldbraun
+  col05: "#574312", // Sehr dunkles Braun
+  colbg01: "#3C2E0D", // Dunkler Hintergrund
+  colbg02: "#1F1706", // Noch dunklerer Hintergrund
+};
+
+const colorsGryffindor = {
+  col01: "#FFC72C", // Helles Gold
+  col02: "#FFB81C", // Gold
+  col03: "#9E2A2F", // Dunkles Scharlachrot
+  col04: "#7C1F23", // Sehr dunkles Scharlachrot
+  col05: "#5A0E0E", // Tiefes Dunkelrot
+  colbg01: "#7C1F23", // Hintergrund 1 (dunkles Scharlachrot)
+  colbg02: "#5A0E0E", // Hintergrund 2 (tiefes Dunkelrot)
+};
+const colorsHufflepuff = {
+  col01: "#FFF4B1", // Helles Gelb
+  col02: "#FFEB3B", // Sonnengelb
+  col03: "#FBC02D", // Goldgelb
+  col04: "#795548", // Mittelbraun
+  col05: "#4E342E", // Dunkelbraun
+  colbg01: "#4E342E", // Hintergrund 1 (dunkelbraun)
+  colbg02: "#3E2723", // Hintergrund 2 (sehr dunkelbraun)
+};
+const colorsRavenclaw = {
+  col01: "#8E9AAF", // Helles Blau
+  col02: "#5B748E", // Mittelblau
+  col03: "#2C3E50", // Dunkelblau
+  col04: "#A67B5B", // Bronze
+  col05: "#7B5A3E", // Dunkles Bronze
+  colbg01: "#2C3E50", // Hintergrund 1 (dunkelblau)
+  colbg02: "#1C2833", // Hintergrund 2 (sehr dunkelblau)
+};
+const colorsSlytherin = {
+  col01: "#A8D5BA", // Helles Grün
+  col02: "#6FA287", // Mittelgrün
+  col03: "#3C6E47", // Dunkelgrün
+  col04: "#B0B7BC", // Silber
+  col05: "#7D8285", // Dunkles Silber
+  colbg01: "#3C6E47", // Hintergrund 1 (dunkelgrün)
+  colbg02: "#2C4D34", // Hintergrund 2 (sehr dunkelgrün)
+};
+
+const colorsMario = {
+  col01: "#FFB3B3", // Helles Mario-Rot
+  col02: "#FF5C5C", // Intensives Mario-Rot
+  col03: "#E52521", // Klassisches Mario-Rot
+  col04: "#A81B18", // Dunkles Mario-Rot
+  col05: "#660F0E", // Sehr dunkles Mario-Rot
+  colbg01: "#104E8B", // Mario-Blau (Hose)
+  colbg02: "#082542", // Sehr dunkles Blau (fast schwarz-blau)
+};
+
+const colorsLuigi = {
+  col01: "#D3EFD9", // Sanftes, helles Luigi-Grün
+  col02: "#9CD5A7", // Weiches Mittelgrün
+  col03: "#64B57A", // Gedämpftes klassisches Luigi-Grün
+  col04: "#3E7C4D", // Dunkleres Luigi-Grün
+  col05: "#24472C", // Sehr dunkles Luigi-Grün
+  colbg01: "#104E8B", // Luigi-Blau (Hose)
+  colbg02: "#082542", // Sehr dunkles Blau (fast schwarz-blau)
+};
+const colorsYoshi = {
+  col01: "#fcfcfc", // Weiß (Bauch/Ei)
+  col02: "#6fd251", // Klassisches Yoshi-Grün
+  col03: "#fd6134", // Orange-Rot (Yoshis Schuhe oder Stacheln)
+  col04: "#fc8020", // Warmes Orange (Akzentfarbe)
+  col05: "#e71a33", // Intensives Rot (Yoshis Panzer/Kontrast)
+  colbg01: "#6fd251", // Hintergrund in Yoshi-Grün
+  colbg02: "#2f6823", // Dunkles, gedämpftes Grün (für Kontrast)
+};
+
+const colorsPeach = {
+  col01: "#FFE9F3", // Sehr helles Peach-Rosa
+  col02: "#FFB8D9", // Mittelrosa (weich)
+  col03: "#FF7EB9", // Klassisches Peach-Rosa
+  col04: "#E25193", // Kräftiges dunkleres Rosa
+  col05: "#8A2F59", // Tiefes Dunkelrosa
+  colbg01: "#FFAD70", // Dunkleres, warmes Pfirsich-Orange
+  colbg02: "#A17F3D", // Sehr dunkles Goldbraun
+};
+
+
+
+const colorsDonkeyKong = {
+  col01: "#F3E3D3", // Sehr helles Beige
+  col02: "#D7B48A", // Mittelbeige
+  col03: "#A87C4F", // Warmes Braun (Donkey Kong Fell)
+  col04: "#8B572A", // Klassisches DK-Braun
+  col05: "#553419", // Sehr dunkles Braun
+  colbg01: "#EAB464", // DK-Goldbraun (Fell-Kontrast)
+  colbg02: "#7E5C32", // Sehr dunkles Goldbraun
+};
+
+
+  let activeColors = colorsBlue;
 
   // Define CSS templates
   function getCssColors() {
@@ -104,8 +242,53 @@
       case 'blue':
         activeColors = colorsBlue;
         break;
+      case 'green':
+        activeColors = colorsGreen;
+        break;
+      case 'orange':
+        activeColors = colorsOrange;
+        break;
+      case 'purple':
+        activeColors = colorsPurple;
+        break;
+      case 'red':
+        activeColors = colorsRed;
+        break;
+      case 'yellow':
+        activeColors = colorsYellow;
+        break;
       case 'pink':
         activeColors = colorsPink;
+        break;
+      case 'pinker':  
+        activeColors = colorsPinker;
+        break;
+      case 'gryffindor':
+        activeColors = colorsGryffindor;
+        break;
+      case 'hufflepuff':
+        activeColors = colorsHufflepuff;
+        break;
+      case 'ravenclaw':
+        activeColors = colorsRavenclaw;
+        break;
+      case 'slytherin':
+        activeColors = colorsSlytherin;
+        break;
+      case 'mario':
+        activeColors = colorsMario;
+        break;
+      case 'luigi':
+        activeColors = colorsLuigi;
+        break;
+      case 'yoshi':
+        activeColors = colorsYoshi;
+        break;
+      case 'peach':
+        activeColors = colorsPeach;
+        break;
+      case 'donkeykong':
+        activeColors = colorsDonkeyKong;
         break;
       default:
         activeColors = colorsGreen;
@@ -199,6 +382,7 @@
 
     // Define CSS for different paths
     const cssMain = `
+
     .o_frontend_to_backend_nav .o_frontend_to_backend_apps_btn {
         background-color: var(--col02);
     }
@@ -215,7 +399,21 @@
 
     const cssWeb = `
       /* Umfangreicher CSS-Code für /web Pfade */
-
+    .fs-4 {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+}
+    .o_nav_entry {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+    }
+    .dropdown-toggle {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+    }
+    .o_menu_brand {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+    }
+    .o_menu_toggle {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+    }
     /* Direkte Überschreibung der btn-primary Klasse */
     .btn-primary {
         background-color: var(--color-primary) !important;
@@ -246,7 +444,7 @@
         --NavBar-entry-backgroundColor--active: var(--col05);
         --NavBar-entry-backgroundColor--hover: var(--col03);
         --NavBar-entry-backgroundColor--focus: var(--col04);
-
+  
         background: transparent;
     }
     .o_control_panel {

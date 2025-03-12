@@ -30,24 +30,95 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Color scheme definitions
-    const colorSchemes = {
-        green: {
-            primary: '#4B5945',
-            hover: '#66785F',
-            background: '#f5f5f5'
-        },
-        blue: {
-            primary: '#00719c',
-            hover: '#009bd6',
-            background: '#e3f2fd'
-        },
-        pink: {
-            primary: '#893e66',
-            hover: '#dc64a2',
-            background: '#fce4ec'
-        }
-    };
+  // Extended Color scheme definitions
+const colorSchemes = {
+    green: {
+        primary: '#4B5945',
+        hover: '#66785F',
+        background: '#f5f5f5'
+    },
+    blue: {
+        primary: '#00719c',
+        hover: '#009bd6',
+        background: '#e3f2fd'
+    },
+    pink: {
+        primary: '#893e66',
+        hover: '#dc64a2',
+        background: '#fce4ec'
+    },
+    pinker: {
+        primary: '#893e66',
+        hover: '#dc64a2',
+        background: '#fce4ec'
+    },
+    orange: {
+        primary: '#8A4E1E',
+        hover: '#FF9A49',
+        background: '#fff3e0'
+    },
+    purple: {
+        primary: '#57338A',
+        hover: '#B18EFF',
+        background: '#f3e5f5'
+    },
+    red: {
+        primary: '#7A2B2B',
+        hover: '#FF5E5E',
+        background: '#ffebee'
+    },
+    yellow: {
+        primary: '#8A6F21',
+        hover: '#FFDE70',
+        background: '#FFF8C2'
+    },
+    gryffindor: {
+        primary: '#9E2A2F',
+        hover: '#FFC72C',
+        background: '#FFEDE7'
+    },
+    hufflepuff: {
+        primary: '#FBC02D',
+        hover: '#FFEB3B',
+        background: '#FFFBE6'
+    },
+    ravenclaw: {
+        primary: '#2C3E50',
+        hover: '#5B748E',
+        background: '#E8F0FE'
+    },
+    slytherin: {
+        primary: '#3C6E47',
+        hover: '#6FA287',
+        background: '#E8F5E9'
+    },
+    mario: {
+        primary: '#E52521',    // Klassisches Mario-Rot
+        hover: '#049CD8',      // Mario-Blau (Hose)
+        background: '#FFE5E5'  // Sehr helles Rot-Rosa als freundlicher Hintergrund
+    },
+    luigi: {
+        primary: '#4CAF50',    // Luigi-Grün
+        hover: '#039BE5',      // Luigi-Blau (Hose)
+        background: '#E8F5E9'  // Sehr helles Grün als Hintergrund
+    },
+    yoshi: {
+        primary: '#6EBE49',    // Yoshi-Grün
+        hover: '#E63946',      // Yoshi-Rot (Panzer)
+        background: '#F1F8E9'  // Helles Grün als Hintergrund
+    },
+    peach: {
+        primary: '#FF7EB9',    // Peach-Rosa
+        hover: '#FFD166',      // Peach-Gold (Krone/Haar)
+        background: '#FFF0F6'  // Zartrosa Hintergrund
+    },
+    donkeykong: {
+        primary: '#8B572A',    // DK-Braun
+        hover: '#EAB464',      // DK-Goldbraun (Fell-Kontrast)
+        background: '#F3E9E0'  // Beige Hintergrund
+    }
+    
+};
 
     // Function to update UI colors
     function updateUIColors(scheme) {
