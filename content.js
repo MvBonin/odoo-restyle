@@ -645,8 +645,11 @@ const colorsDonkeyKong = {
         color: #FFF;
     }
 
-
-  .o_searchview_dropdown_toggler, .o-dropdown--menu {
+ body > div.o_action_manager > div > div > div.o_control_panel.d-flex.flex-column.gap-3.gap-lg-1.px-3.pt-2.pb-3 > div > div.o_control_panel_breadcrumbs.d-flex.align-items-center.gap-1.order-0.h-lg-100 > div.o_breadcrumb.d-flex.flex-row.flex-md-column.align-self-stretch.justify-content-between.min-w-0 > ol > li:nth-child(1) > div > button {
+ background: transparent;
+ border-color: transparent;
+ }
+  .o_searchview_dropdown_toggler, .o-dropdown--menu, .o-dropdown--menu::hover {
         background-color: rgba(38, 42, 54, 0.2) !important;
         color: #FFF !important;
         backdrop-filter: blur(10px) !important; /* blur effect */
