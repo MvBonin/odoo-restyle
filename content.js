@@ -636,7 +636,17 @@ const colorsDonkeyKong = {
     }
 
 
- .btn-secondary, .o_searchview_dropdown_toggler, .o-dropdown--menu {
+    .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none).o_arrow_button_current:disabled:before, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none).o_arrow_button_current:disabled:before, .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none).o_arrow_button_current:disabled + .btn:before, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none).o_arrow_button_current:disabled + .btn:before, .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none):active:not(.o_first):before, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none):active:not(.o_first):before, .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none):active:not(.o_first) + .btn:before, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none):active:not(.o_first) + .btn:before {
+      border-left-color: var(--color-primary) !important;
+    }
+    .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none).o_arrow_button_current:disabled, .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none).o_arrow_button_current:disabled, .o_field_statusbar > .o_statusbar_status > .o_arrow_button:not(.d-none):active:not(.o_first), .o_field_statusbar_duration > .o_statusbar_status > .o_arrow_button:not(.d-none):active:not(.o_first) {
+        background-color: #17373b;
+        border-color: var(--color-primary) !important;
+        color: #FFF;
+    }
+
+
+  .o_searchview_dropdown_toggler, .o-dropdown--menu {
         background-color: rgba(38, 42, 54, 0.2) !important;
         color: #FFF !important;
         backdrop-filter: blur(10px) !important; /* blur effect */
@@ -644,9 +654,15 @@ const colorsDonkeyKong = {
         border-color: var(--color-primary) !important;
     }
 
+    .btn-secondary, .btn-secondary::hover {
+    color: #FFF !important;
+        backdrop-filter: blur(10px) !important; /* blur effect */
+        -webkit-backdrop-filter: blur(10px) !important; /* Safari support */
+        border-color: var(--color-primary) !important;
+    }
  
 
-      .btn-secondary:hover, .o_searchview_dropdown_toggler:hover {
+     .o_searchview_dropdown_toggler:hover {
         background-color: rgba(38, 42, 54, 0.3) !important;
         color: #FFF !important;
         backdrop-filter: blur(10px) !important; /* blur effect */
@@ -658,12 +674,8 @@ const colorsDonkeyKong = {
     background-color: rgba(38, 42, 54, 0.2) !important;
     border-color: var(--color-text-link) !important;
     }
-    .o_arrow_button {
-    border-color: var(--color-primary) !important;
-    }
-    .o_arrow_button_current::before {
-        border-color-left: var(--color-primary) !important;
-    }
+
+ 
 
         .o_searchview_input::placeholder {
     color: #EEEEEE;
