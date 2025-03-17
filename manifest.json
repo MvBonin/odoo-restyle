@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ODOO 17 ReStyle",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Recoloring for ODOO 17",
   "author": "Markwart v. Bonin",
   "permissions": ["storage", "activeTab", "tabs"],

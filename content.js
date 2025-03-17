@@ -702,12 +702,19 @@ const colorsDonkeyKong = {
     color: #EEEEEE;
     opacity: 1;
 }
+    .o-dropdown--menu {
+        background-color: rgba(38, 42, 54, 0.5) !important;
+        backdrop-filter: blur(10px) !important; /* blur effect */
+        -webkit-backdrop-filter: blur(10px) !important; /* Safari support */
+        border-color: var(--color-primary) !important;
+    }
 
     .nav-tabs {
         background-color: rgba(38, 42, 54, 0.5) !important;
         backdrop-filter: blur(10px) !important; /* blur effect */
         -webkit-backdrop-filter: blur(10px) !important; /* Safari support */
     }
+
     .nav-link {
         border-color: var(--color-primary) !important;
         border-radius: 0.25rem !important;
