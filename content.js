@@ -750,7 +750,7 @@ const colorsDonkeyKong = {
     `;
 
     // Apply the appropriate CSS
-    if (path.startsWith('/web')) {
+    if (path.startsWith('/web') || path.startsWith('/odoo' )) {
       addStyle(cssWeb, 'custom-css-web');
       removeStyle('custom-css-main');
     } else {
