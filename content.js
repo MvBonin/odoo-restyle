@@ -408,6 +408,9 @@ const colorsDonkeyKong = {
     .dropdown-toggle {
     text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
     }
+    .o_searchview_dropdown_toggler {
+    border-color: var(--color-primary) !important;
+    }
     .o_menu_brand {
     text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
     }
