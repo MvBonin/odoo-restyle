@@ -28,8 +28,8 @@
 
   const colorsGreen = {
     col01: "#a8e6a1", // Hellgrün (Highlight)
-    col02: "#80c77a", // Kräftiges Mittelgrün
-    col03: "#5a9a56", // Gedämpftes Dunkelgrün
+    col02: "#36b147", // Kräftiges Mittelgrün
+    col03: "#2d8331", // Gedämpftes Dunkelgrün
     col04: "#376236", // Dunkelgrün
     col05: "#1b331b", // Sehr dunkles Grün
     colbg01: "#2c4d2c", // Hintergrund 1 (etwas dunkler als col04)
@@ -48,7 +48,7 @@
 const colorsPinker = {
   col01: "#FFD9EC", // Helles Pastellpink
   col02: "#FF8ED2", // Intensives Pink
-  col03: "#FF52B6", // Leuchtendes Pink
+  col03: "#ca5d95", // Leuchtendes Pink
   col04: "#E62991", // Kräftiges, dunkleres Pink
   col05: "#A61D6B", // Tiefes Dunkelpink
   colbg01: "#731447", // Dunkler Hintergrund (kräftiges Pink)
@@ -58,7 +58,7 @@ const colorsPinker = {
 const colorsOrange = {
   col01: "#FFC285", // Helles Orange
   col02: "#FF9A49", // Kräftiges Orange
-  col03: "#D17A33", // Gedämpftes Mittelorange
+  col03: "#de8a32", // Gedämpftes Mittelorange
   col04: "#8A4E1E", // Dunkel-Orange-Braun
   col05: "#4A2910", // Sehr dunkles Braun
   colbg01: "#633614", // Dunkler Hintergrund
@@ -78,7 +78,7 @@ const colorsPurple = {
 const colorsRed = {
   col01: "#FF9A9A", // Helles Rot-Rosa
   col02: "#FF5E5E", // Kräftiges Rot
-  col03: "#C24444", // Dunkleres Rot
+  col03: "#c22c30", // Dunkleres Rot
   col04: "#7A2B2B", // Dunkelrot
   col05: "#451919", // Sehr dunkles Burgund
   colbg01: "#561F1F", // Dunkler Hintergrund
@@ -88,11 +88,11 @@ const colorsRed = {
 const colorsYellow = {
   col01: "#FFE899", // Warmes, helles Gelb (freundlich)
   col02: "#FFD966", // Wärmeres Mittelgelb
-  col03: "#D9B13B", // Kräftiges, warmes Goldgelb
+  col03: "#e3a721", // Kräftiges, warmes Goldgelb
   col04: "#947324", // Warmes, dunkles Goldbraun
   col05: "#574312", // Sehr dunkles Braun
-  colbg01: "#3C2E0D", // Dunkler Hintergrund
-  colbg02: "#1F1706", // Noch dunklerer Hintergrund
+  colbg01: "#47300a", // Dunkler Hintergrund
+  colbg02: "#301604", // Noch dunklerer Hintergrund
 };
 
 const colorsGryffindor = {
@@ -106,8 +106,8 @@ const colorsGryffindor = {
 };
 const colorsHufflepuff = {
   col01: "#FFF4B1", // Helles Gelb
-  col02: "#FFEB3B", // Sonnengelb
-  col03: "#FBC02D", // Goldgelb
+  col02: "#f6d385", // Sonnengelb
+  col03: "#f9c648", // Goldgelb
   col04: "#795548", // Mittelbraun
   col05: "#4E342E", // Dunkelbraun
   colbg01: "#4E342E", // Hintergrund 1 (dunkelbraun)
@@ -115,27 +115,27 @@ const colorsHufflepuff = {
 };
 const colorsRavenclaw = {
   col01: "#8E9AAF", // Helles Blau
-  col02: "#5B748E", // Mittelblau
-  col03: "#2C3E50", // Dunkelblau
+  col02: "#8098b1", // Mittelblau
+  col03: "#275787", // Dunkelblau
   col04: "#A67B5B", // Bronze
   col05: "#7B5A3E", // Dunkles Bronze
   colbg01: "#2C3E50", // Hintergrund 1 (dunkelblau)
   colbg02: "#1C2833", // Hintergrund 2 (sehr dunkelblau)
 };
 const colorsSlytherin = {
-  col01: "#A8D5BA", // Helles Grün
+  col01: "#B0B7BC", // Silber
   col02: "#6FA287", // Mittelgrün
   col03: "#3C6E47", // Dunkelgrün
   col04: "#B0B7BC", // Silber
   col05: "#7D8285", // Dunkles Silber
-  colbg01: "#3C6E47", // Hintergrund 1 (dunkelgrün)
-  colbg02: "#2C4D34", // Hintergrund 2 (sehr dunkelgrün)
+  colbg01: "#24422b", // Hintergrund 1 (dunkelgrün)
+  colbg02: "#25412c", // Hintergrund 2 (sehr dunkelgrün)
 };
 
 const colorsMario = {
   col01: "#FFB3B3", // Helles Mario-Rot
   col02: "#FF5C5C", // Intensives Mario-Rot
-  col03: "#E52521", // Klassisches Mario-Rot
+  col03: "#d4423f", // Klassisches Mario-Rot
   col04: "#A81B18", // Dunkles Mario-Rot
   col05: "#660F0E", // Sehr dunkles Mario-Rot
   colbg01: "#104E8B", // Mario-Blau (Hose)
@@ -164,7 +164,7 @@ const colorsYoshi = {
 const colorsPeach = {
   col01: "#FFE9F3", // Sehr helles Peach-Rosa
   col02: "#FFB8D9", // Mittelrosa (weich)
-  col03: "#FF7EB9", // Klassisches Peach-Rosa
+  col03: "#e672aa", // Klassisches Peach-Rosa
   col04: "#E25193", // Kräftiges dunkleres Rosa
   col05: "#8A2F59", // Tiefes Dunkelrosa
   colbg01: "#FFAD70", // Dunkleres, warmes Pfirsich-Orange
@@ -414,11 +414,13 @@ const colorsDonkeyKong = {
     .o_menu_toggle {
     text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
     }
+
     /* Direkte Überschreibung der btn-primary Klasse */
     .btn-primary {
         background-color: var(--color-primary) !important;
         border-color: var(--color-primary) !important;
         color: var(--color-text-white) !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
     }
 
     .text-primary {
@@ -503,7 +505,8 @@ const colorsDonkeyKong = {
    padding-right: 8px;
     }
 
-    .o_kanban_renderer {
+    .o_content {
+    border-top: 0px;
     //--KanbanGroup-grouped-bg: #262A36;
     //--KanbanRecord__image-bg-color: #E4E4E4;
     //--KanbanColumn__highlight-background: #17373b;
@@ -522,7 +525,7 @@ const colorsDonkeyKong = {
 
     }
 
-    .o_navbar {
+    .o_navbar, .o_kanban_renderer {
        background: transparent;
     }
 
@@ -714,6 +717,8 @@ const colorsDonkeyKong = {
         backdrop-filter: blur(10px) !important; /* blur effect */
         -webkit-backdrop-filter: blur(10px) !important; /* Safari support */
     }
+
+
 
     .nav-link {
         border-color: var(--color-primary) !important;
