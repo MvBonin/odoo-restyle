@@ -1,6 +1,6 @@
 # Datenschutzerklärung
 
-Diese Datenschutzerklärung erklärt, wie Ihr Chrome-Plugin ("das Plugin") mit den Daten der Benutzer umgeht. Der Schutz Ihrer Privatsphäre ist uns sehr wichtig, und wir verpflichten uns, Ihre persönlichen Informationen zu schützen.
+Diese Datenschutzerklärung erklärt, wie Ihr Chrome-Plugin bzw Edge-Plugin ("das Plugin") mit den Daten der Benutzer umgeht. Der Schutz Ihrer Privatsphäre ist uns sehr wichtig, und wir verpflichten uns, Ihre persönlichen Informationen zu schützen.
 
 ## 1. Erhebung von Daten
 
